@@ -7,14 +7,23 @@ import { ArrowLeft, GraduationCap, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import { Card } from '@/components/ui/Card';
-import { getFacultyAppUrl, getStudentAppUrl } from '@/lib/env';
 
 export default function AuthPage() {
   const [selectedRole, setSelectedRole] = useState<'faculty' | 'student' | null>(null);
+  const facultyUrl = process.env.NEXT_PUBLIC_FACULTY_URL;
+  const studentUrl = process.env.NEXT_PUBLIC_STUDENT_URL;
+
+  console.log('ENV faculty:', process.env.NEXT_PUBLIC_FACULTY_URL);
+  console.log('ENV student:', process.env.NEXT_PUBLIC_STUDENT_URL);
 
   const handleRoleSelection = (role: 'faculty' | 'student') => {
     setSelectedRole(role);
-    const url = role === 'faculty' ? getFacultyAppUrl() : getStudentAppUrl();
+    const url = role === 'faculty' ? facultyUrl : studentUrl;
+
+    if (!url) {
+      console.error(`Missing required environment variable: ${role === 'faculty' ? 'NEXT_PUBLIC_FACULTY_URL' : 'NEXT_PUBLIC_STUDENT_URL'}`);
+      return;
+    }
 
     window.location.href = `${url}/auth`;
   };

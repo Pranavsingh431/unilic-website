@@ -2,7 +2,8 @@ function getRequiredEnv(name: string) {
   const value = process.env[name];
 
   if (!value) {
-    throw new Error(`Missing required environment variable: ${name}`);
+    console.error(`Missing required environment variable: ${name}`);
+    return '';
   }
 
   return value;
