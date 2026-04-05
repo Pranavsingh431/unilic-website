@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
+import { getLandingUrl } from '@/lib/env';
 import { validateEmail } from '@/lib/utils';
 import { Mail, Lock, User, AlertCircle, ArrowLeft } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
@@ -126,7 +127,7 @@ export default function AuthPage() {
     <div className="min-h-screen bg-slate-50 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <Link 
-          href={process.env.NEXT_PUBLIC_LANDING_URL || 'http://localhost:3000'}
+          href={getLandingUrl()}
           className="mb-6 inline-flex items-center gap-2 text-sm text-slate-500 transition hover:text-slate-900"
         >
           <ArrowLeft className="h-4 w-4" />

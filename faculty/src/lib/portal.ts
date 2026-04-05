@@ -1,5 +1,5 @@
 import { supabase, User } from '@/lib/supabase';
-import type { ComputedStudent, GradePolicy, StudentMarks, WeightageConfig } from '@unilic/shared';
+import type { ComputedStudent, GradePolicy, StudentMarks, WeightageConfig } from '@/lib/grading';
 
 export interface CourseResource {
   id: string;

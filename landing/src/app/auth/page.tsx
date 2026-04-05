@@ -7,16 +7,14 @@ import { ArrowLeft, GraduationCap, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import { Card } from '@/components/ui/Card';
+import { getFacultyAppUrl, getStudentAppUrl } from '@/lib/env';
 
 export default function AuthPage() {
   const [selectedRole, setSelectedRole] = useState<'faculty' | 'student' | null>(null);
 
   const handleRoleSelection = (role: 'faculty' | 'student') => {
     setSelectedRole(role);
-    const url =
-      role === 'faculty'
-        ? process.env.NEXT_PUBLIC_FACULTY_URL || 'http://localhost:3001'
-        : process.env.NEXT_PUBLIC_STUDENT_URL || 'http://localhost:3002';
+    const url = role === 'faculty' ? getFacultyAppUrl() : getStudentAppUrl();
 
     window.location.href = `${url}/auth`;
   };

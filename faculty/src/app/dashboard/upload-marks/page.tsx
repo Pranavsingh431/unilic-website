@@ -12,7 +12,7 @@ import {
   ParsedMarksResult,
   WeightageConfig,
   type ComputedStudent,
-} from '@unilic/shared';
+} from '@/lib/grading';
 import { Download, FileSpreadsheet, Mail, Save, Send, Upload } from 'lucide-react';
 
 import SectionCard from '@/components/SectionCard';

@@ -1,4 +1,4 @@
-// File: /Users/pranavsingh/Downloads/unilic/apps/faculty/src/app/layout.tsx
+// File: /Users/pranavsingh/Downloads/unilic-website/faculty/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

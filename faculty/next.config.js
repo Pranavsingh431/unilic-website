@@ -1,16 +1,21 @@
 /** @type {import('next').NextConfig} */
+const supabaseHostname = process.env.NEXT_PUBLIC_SUPABASE_URL
+  ? new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).hostname
+  : null;
+
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ['@unilic/shared'],
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'ncqjqrkusaujjcednzuk.supabase.co',
-        port: '',
-        pathname: '/storage/v1/**',
-      },
-    ],
+    remotePatterns: supabaseHostname
+      ? [
+          {
+            protocol: 'https',
+            hostname: supabaseHostname,
+            port: '',
+            pathname: '/storage/v1/**',
+          },
+        ]
+      : [],
   },
 }
 

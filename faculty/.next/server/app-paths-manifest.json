@@ -1,8 +1,8 @@
 {
   "/auth/page": "app/auth/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
+  "/page": "app/page.js",
   "/dashboard/upload-marks/page": "app/dashboard/upload-marks/page.js",
-  "/dashboard/course/[id]/page": "app/dashboard/course/[id]/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
   "/dashboard/profile/page": "app/dashboard/profile/page.js",
   "/dashboard/settings/page": "app/dashboard/settings/page.js"
 }

@@ -1,0 +1,17 @@
+{
+  "name": "unilic-apps",
+  "private": true,
+  "workspaces": [
+    "faculty",
+    "student",
+    "landing"
+  ],
+  "scripts": {
+    "dev:faculty": "npm run dev --workspace=faculty",
+    "dev:student": "npm run dev --workspace=student",
+    "dev:landing": "npm run dev --workspace=landing",
+    "build:faculty": "npm run build --workspace=faculty",
+    "build:student": "npm run build --workspace=student",
+    "build:landing": "npm run build --workspace=landing"
+  }
+}

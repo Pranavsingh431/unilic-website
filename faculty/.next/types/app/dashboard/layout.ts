@@ -1,4 +1,4 @@
-// File: /Users/pranavsingh/Downloads/unilic/apps/faculty/src/app/dashboard/layout.tsx
+// File: /Users/pranavsingh/Downloads/unilic-website/faculty/src/app/dashboard/layout.tsx
 import * as entry from '../../../../src/app/dashboard/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
